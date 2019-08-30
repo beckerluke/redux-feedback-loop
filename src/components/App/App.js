@@ -4,6 +4,7 @@ import './App.css';
 import {HashRouter as Router, Route} from 'react-router-dom';
 
 import HomePage from '../pages/homePage/HomePage';
+import UnderstandPage from '../pages/understandPage/UnderstandPage';
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
         <br/>
         <Router>
           <Route exact path="/" component={HomePage} />
+          <Route exact path="/understand" component={UnderstandPage} />
         </Router>
       </div>
     );

@@ -3,8 +3,11 @@ import axios from 'axios';
 import './App.css';
 import {HashRouter as Router, Route} from 'react-router-dom';
 
+// PAGE COMPONENTS
 import HomePage from '../pages/homePage/HomePage';
 import UnderstandPage from '../pages/understandPage/UnderstandPage';
+import CommentsPage from '../pages/commentsPage/CommentsPage';
+import ReviewPage from '../pages/reviewPage/ReviewPage';
 
 class App extends Component {
   render() {
@@ -18,6 +21,8 @@ class App extends Component {
         <Router>
           <Route exact path="/" component={HomePage} />
           <Route exact path="/understand" component={UnderstandPage} />
+          <Route exact path="/comments" component={CommentsPage} />
+          <Route exact path="/review" component={ReviewPage} />
         </Router>
       </div>
     );

@@ -2,6 +2,11 @@ import React, {Component} from 'react';
 
 class UnderstandPage extends Component {
     
+    // takes you to comments page 
+    clickNext = (event) => {
+        this.props.history.push('/comments')
+    }
+
     render() {
         return(
             <div>
@@ -10,7 +15,7 @@ class UnderstandPage extends Component {
                     <label>Understanding?</label>
                 </div>
                 <input type="number" placeholder="enter understanding"/>
-                <button>NEXT</button>
+                <button onClick={this.clickNext}>NEXT</button>
             </div>
         )
     }

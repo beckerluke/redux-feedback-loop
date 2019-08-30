@@ -1,18 +1,18 @@
 import React, {Component} from 'react';
 
-class HomePage extends Component {
+class CommentsPage extends Component {
 
-    // takes you to Understand Page
+    // takes you to Review Page
     clickNext = (event) => {
-        this.props.history.push('/understand');
+        this.props.history.push('/review');
     }
     
     render() {
         return(
             <div>
-                <h1>How are you feeling today?</h1>
+                <h1>Any comments you want to leave?</h1>
                 <div>
-                    <label>Feeling?</label>
+                    <label>Comments</label>
                 </div>
                 <input type="number" placeholder="enter your feeling"/>
                 <button onClick={this.clickNext}>NEXT</button>
@@ -21,4 +21,4 @@ class HomePage extends Component {
     }
 }
 
-export default HomePage;
+export default CommentsPage;

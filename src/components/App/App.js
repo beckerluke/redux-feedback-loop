@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
+import {HashRouter as Router, Route} from 'react-router-dom';
+
+import HomePage from '../pages/homePage/HomePage';
 
 class App extends Component {
   render() {
@@ -11,6 +14,9 @@ class App extends Component {
           <h4><i>Don't forget it!</i></h4>
         </header>
         <br/>
+        <Router>
+          <Route exact path="/" component={HomePage} />
+        </Router>
       </div>
     );
   }

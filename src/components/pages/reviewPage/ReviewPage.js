@@ -54,10 +54,6 @@ class ReviewPage extends Component {
                     <h3>Understanding: {understandRating}</h3>
                     <h3>Support: {supportRating}</h3>
                     <h3>Comments: {commentInput}</h3>
-                    {/* <h3>Understanding: {feedback.understanding}</h3>
-                    <h3>Support: {feedback.support}</h3>
-                    <h3>Comments: {feedback.comments}</h3> */}
-               
                 <button onClick={this.clickSubmit}>SUBMIT</button>
             </div>
         )

@@ -22,18 +22,19 @@ const addFeedbackReducer = (state = userFeedback, action) => {
             understanding: action.payload
         }
     }
-
+    // set state with what user inputs in the support form
     if (action.type === 'ADD_SUPPORT') {
         return {
             ...state,
             support: action.payload
         }
     }
-
+    // set state with what user inputs in the comment form
     if (action.type === 'ADD_COMMENT') {
-        return [
-            {...action.payload}
-        ]
+        return {
+            ...state,
+            support: action.payload
+        }
     }
     return state;
 }

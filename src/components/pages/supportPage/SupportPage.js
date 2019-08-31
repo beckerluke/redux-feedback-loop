@@ -11,12 +11,12 @@ class SupportPage extends Component {
         const supportRating = this.state.supportRating;
         this.props.dispatch({type: 'ADD_SUPPORT', payload: supportRating});
         // takes you to support page 
-        this.props.history.push('/comments')
+        this.props.history.push('/comments');
     }
 
     updateSupportForm = (event) => {
         this.setState({
-            // what user inputs in Understand Form
+            // what user inputs in Support Form
             supportRating: event.target.value
         })
     }

@@ -1,11 +1,21 @@
 import React, {Component} from 'react';
+import { getFeedback } from '../../modules/services/feedback.service';
 
 class ReviewPage extends Component {
 
+    componentDidMount() {
+        // calls function that sparks GET request for feedback
+        // response is the array of objects with feedback data from database
+        getFeedback().then((response) => {
+            console.log(response.data);
+        })
+    }
+    
     // takes you to Success Page after submission clicked
     clickNext = (event) => {
         this.props.history.push('/success');
     }
+
 
     render() {
         return(

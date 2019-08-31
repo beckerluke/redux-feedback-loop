@@ -14,7 +14,7 @@ class CommentsPage extends Component {
                 <div>
                     <label>Comments</label>
                 </div>
-                <input type="number" placeholder="enter your feeling"/>
+                <input type="text" placeholder="enter your feeling"/>
                 <button onClick={this.clickNext}>NEXT</button>
             </div>
         )

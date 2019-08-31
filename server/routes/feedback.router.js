@@ -13,9 +13,27 @@ router.get('/', (req, res) => {
     res.send(result.rows);
   })
   .catch(error => {
-    console.log('error getting books', error);
+    console.log('error getting feedback', error);
     res.sendStatus(500);
   });
 });
 
-module.exports = router
+router.post('/', (req, res) => {
+    const newFeedback = req.body;
+    console.log(req.body);
+    
+    const queryText = `INSERT INTO "feedback" ("feeling", "understanding", "support", "comments")
+                        VALUES ($1, $2, $3, $4);`;
+    
+    pool.query(queryText, [newFeedback.feeling, newFeedback.understanding, newFeedback.support, newFeedback.comments])
+        .then((result) => {
+            res.sendStatus(201);
+        })
+        .catch((err) => {
+            console.log('Error posting: ', err);
+            res.sendStatus(500);
+        });
+
+});
+
+module.exports = router;

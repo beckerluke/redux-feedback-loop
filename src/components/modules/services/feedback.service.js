@@ -7,6 +7,15 @@ const getFeedback = () => {
     })
 }
 
+const postFeedback = (feedback) => {
+    return axios({
+        method: 'POST',
+        url: '/feedback',
+        data: feedback
+    })
+}
+
 export {
-    getFeedback
+    getFeedback,
+    postFeedback
 }

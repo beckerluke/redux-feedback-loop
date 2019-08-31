@@ -33,7 +33,7 @@ const addFeedbackReducer = (state = userFeedback, action) => {
     if (action.type === 'ADD_COMMENT') {
         return {
             ...state,
-            support: action.payload
+            comments: action.payload
         }
     }
     return state;

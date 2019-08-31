@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import { getFeedback } from '../../modules/services/feedback.service';
+import mapStoreToProps from '../../modules/mapStoreToProps';
 
 class ReviewPage extends Component {
 
@@ -8,6 +10,7 @@ class ReviewPage extends Component {
         // response is the array of objects with feedback data from database
         getFeedback().then((response) => {
             console.log(response.data);
+            this.props.dispatch({type: 'SET_FEEDBACK', payload: response.data})
         })
     }
     
@@ -31,4 +34,4 @@ class ReviewPage extends Component {
     }
 }
 
-export default ReviewPage;
+export default connect(mapStoreToProps)(ReviewPage);

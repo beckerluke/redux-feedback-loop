@@ -8,12 +8,13 @@ import {createStore, combineReducers, applyMiddleware} from 'redux';
 import logger from 'redux-logger';
 
 // REDUCERS
-import baseReducer from './components/modules/reducers/base.reducer'
-
+import baseReducer from './components/modules/reducers/base.reducer';
+import feedbackReducer from './components/modules/reducers/feedback.reducer';
 
 const store = createStore(
     combineReducers({
         baseReducer,
+        feedbackReducer
     }),
     applyMiddleware(logger)
 )

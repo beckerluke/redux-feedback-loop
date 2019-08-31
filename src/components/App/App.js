@@ -9,6 +9,7 @@ import UnderstandPage from '../pages/understandPage/UnderstandPage';
 import CommentsPage from '../pages/commentsPage/CommentsPage';
 import ReviewPage from '../pages/reviewPage/ReviewPage';
 import SuccessPage from '../pages/successPage/SuccessPage';
+import SupportPage from '../pages/supportPage/SupportPage';
 
 class App extends Component {
   render() {
@@ -22,6 +23,7 @@ class App extends Component {
         <Router>
           <Route exact path="/" component={HomePage} />
           <Route exact path="/understand" component={UnderstandPage} />
+          <Route exact path="/support" component={SupportPage} />
           <Route exact path="/comments" component={CommentsPage} />
           <Route exact path="/review" component={ReviewPage} />
           <Route exact path="/success" component={SuccessPage} />         

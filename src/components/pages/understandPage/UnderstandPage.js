@@ -9,6 +9,11 @@ class UnderstandPage extends Component {
     
     clickNext = (event) => {
         const understandRating = this.state.understandRating;
+        // Make sure user inputs something before moving to next page
+        if (understandRating === '') {
+            return alert('Please Enter Your Level Of Understanding');
+        } 
+        // dispatching user input in understanding form to addFeedbackReducer
         this.props.dispatch({type: 'ADD_UNDERSTAND', payload: understandRating});
         // takes you to support page 
         this.props.history.push('/support')
@@ -16,7 +21,7 @@ class UnderstandPage extends Component {
 
     updateUnderstandForm = (event) => {
         this.setState({
-            // what user inputs in Understand Form
+             // changes state to whatever user is inputting in Understanding form
             understandRating: event.target.value
         })
     }

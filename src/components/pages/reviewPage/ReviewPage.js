@@ -45,7 +45,6 @@ class ReviewPage extends Component {
         return(
             <div>
                 <h1>Review Your Feedback</h1>
-                {/* {feedbackArray} */}
                  {/* Displays User's Feelings Input Data
                      Displays User's Understanding Input Data
                      Displays User's Support Input Data

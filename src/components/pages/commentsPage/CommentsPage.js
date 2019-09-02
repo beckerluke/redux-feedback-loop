@@ -10,6 +10,7 @@ class CommentsPage extends Component {
     
     clickNext = (event) => {
         const comment = this.state.comment;
+        // dispatching user input for for comment form to addFeedbackReducer
         this.props.dispatch({type: 'ADD_COMMENT', payload: comment});
         // takes you to Review Page
         this.props.history.push('/review');
@@ -17,7 +18,7 @@ class CommentsPage extends Component {
     
     updateCommentForm = (event) => {
         this.setState({
-            // what user inputs in Comment Form
+            // changes state to whatever user is inputting in comments form
             comment: event.target.value
         })
     }

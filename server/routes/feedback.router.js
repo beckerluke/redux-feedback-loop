@@ -3,13 +3,11 @@ const router = express.Router();
 
 const pool = require('../modules/pool');
 
-// Get feedback data from database
+// GET feedback data from database
 router.get('/', (req, res) => {
   let queryText = 'SELECT feeling, understanding, support, comments FROM "feedback";';
   pool.query(queryText).then(result => {
     // Sends back the array of objects holding feedback data 
-    console.log(result.rows);
-    
     res.send(result.rows);
   })
   .catch(error => {
@@ -18,13 +16,14 @@ router.get('/', (req, res) => {
   });
 });
 
+// POST user input data into database
 router.post('/', (req, res) => {
     const newFeedback = req.body;
-    console.log(req.body);
     
     const queryText = `INSERT INTO "feedback" ("feeling", "understanding", "support", "comments")
                         VALUES ($1, $2, $3, $4);`;
     
+    // Sending to DATABASE
     pool.query(queryText, [newFeedback.feeling, newFeedback.understanding, newFeedback.support, newFeedback.comments])
         .then((result) => {
             res.sendStatus(201);

@@ -9,15 +9,22 @@ class HomePage extends Component {
         feelingRating: '',
     }
 
-    // takes you to Understand Page
     clickNext = (event) => {
         const feelingRating = this.state.feelingRating;
+        // Make sure user inputs something before moving to next page
+        if (feelingRating === '') {
+            return alert('Please Enter How You Are Feeling');
+        } 
+        // dispatching user input to addFeedbackReducer
         this.props.dispatch({type: 'ADD_FEELING', payload: feelingRating});
+        // takes you to Understand Page
         this.props.history.push('/understand');
+        
     }
 
     updateFeelingForm = (event) => {
         this.setState({
+            // changes state to whatever user is inputting in feelings form
             feelingRating: event.target.value
         })
     }

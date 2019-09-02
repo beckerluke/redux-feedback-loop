@@ -9,14 +9,19 @@ class SupportPage extends Component {
     
     clickNext = (event) => {
         const supportRating = this.state.supportRating;
+        // Make sure user inputs something before moving to next page
+        if (supportRating === '') {
+            return alert('Please Enter How Well You Are Being Supported');
+        } 
+        // dispatching user input to addFeedbackReducer
         this.props.dispatch({type: 'ADD_SUPPORT', payload: supportRating});
-        // takes you to support page 
+        // takes you to comments page 
         this.props.history.push('/comments');
     }
 
     updateSupportForm = (event) => {
         this.setState({
-            // what user inputs in Support Form
+             // changes state to whatever user is inputting in Support form
             supportRating: event.target.value
         })
     }

@@ -3,7 +3,7 @@ const router = express.Router();
 
 const pool = require('../modules/pool');
 
-// GET feedback data from database
+// GET feedback data from database if necessary
 router.get('/', (req, res) => {
   let queryText = 'SELECT feeling, understanding, support, comments FROM "feedback";';
   pool.query(queryText).then(result => {

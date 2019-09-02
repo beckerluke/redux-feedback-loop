@@ -6,7 +6,6 @@ const userFeedback = {
 };
 
 const addFeedbackReducer = (state = userFeedback, action) => {
-    console.log(action.payload);
     
     // set state with what user inputs in the Feeling form
     if (action.type === 'ADD_FEELING') {

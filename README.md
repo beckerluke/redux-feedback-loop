@@ -1,13 +1,7 @@
-# Redux Feedback Loop
+#  Feedback Form
 
 
->Do not clone this repository. Instead, download the zip, extract the contents, create a new GitHub repository and `git init`, `git add .`, `git commit -m "initial commit - base project"` and add your remote. Please do this before you leave for the day.
-
-**PLEASE COMMENT YOUR CODE.**
-
-"And my last reminder of the day, which is my last reminder of every day, is...?" - Luke
-
- For this assignment, you will be creating a feedback form modeled after Prime's system. Feedback will be collected over 4 views. In a separate review page, display the current feedback values and a submit button. and when all steps are complete, your app will save the feedback in the database. 
+>The project is a feedback form for users of a class to fill out after each class. The user will be instructed to enter their feedback score and will be taken through different pages with different questions. When all forms have been filled out the user will be able to review everything they entered before submitting. Once submitting, their data will be stored in a database, they will be thanked, then looped back to the first, main page.
 
 ### SETUP
 

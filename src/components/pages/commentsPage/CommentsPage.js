@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import mapStoreToProps from '../../modules/mapStoreToProps';
+import mapStoreToProps from '../../../modules/mapStoreToProps';
 
 class CommentsPage extends Component {
     

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import { getFeedback, postFeedback } from '../../modules/services/feedback.service';
-import mapStoreToProps from '../../modules/mapStoreToProps';
+import { getFeedback, postFeedback } from '../../../modules/services/feedback.service';
+import mapStoreToProps from '../../../modules/mapStoreToProps';
 
 class ReviewPage extends Component {
 

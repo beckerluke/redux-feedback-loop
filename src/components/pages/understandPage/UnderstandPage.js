@@ -14,7 +14,7 @@ class UnderstandPage extends Component {
             return alert('Please Enter Your Level Of Understanding');
         } 
         // dispatching user input in understanding form to addFeedbackReducer
-        this.props.dispatch({type: 'ADD_UNDERSTAND', payload: understandRating});
+        this.props.dispatch({type: 'SET_UNDERSTAND', payload: understandRating});
         // takes you to support page 
         this.props.history.push('/support')
     }

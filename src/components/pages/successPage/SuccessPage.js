@@ -8,10 +8,10 @@ class SuccessPage extends Component {
         // takes you to Admin Page after submission clicked
         this.props.history.push('/');
         // RESETS DATA IN addFeedbackReducer
-        this.props.dispatch({type: 'ADD_FEELING', payload: ''});
-        this.props.dispatch({type: 'ADD_UNDERSTAND', payload: ''});
-        this.props.dispatch({type: 'ADD_SUPPORT', payload: ''});
-        this.props.dispatch({type: 'ADD_COMMENT', payload: ''});
+        this.props.dispatch({type: 'SET_FEELING', payload: ''});
+        this.props.dispatch({type: 'SET_UNDERSTAND', payload: ''});
+        this.props.dispatch({type: 'SET_SUPPORT', payload: ''});
+        this.props.dispatch({type: 'SET_COMMENT', payload: ''});
     }
 
     render() {

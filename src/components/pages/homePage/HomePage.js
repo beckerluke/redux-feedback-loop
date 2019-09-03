@@ -16,7 +16,7 @@ class HomePage extends Component {
             return alert('Please Enter How You Are Feeling');
         } 
         // dispatching user input to addFeedbackReducer
-        this.props.dispatch({type: 'ADD_FEELING', payload: feelingRating});
+        this.props.dispatch({type: 'SET_FEELING', payload: feelingRating});
         // takes you to Understand Page
         this.props.history.push('/understand');
         

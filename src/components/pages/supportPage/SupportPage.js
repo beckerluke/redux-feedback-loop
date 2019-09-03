@@ -14,7 +14,7 @@ class SupportPage extends Component {
             return alert('Please Enter How Well You Are Being Supported');
         } 
         // dispatching user input to addFeedbackReducer
-        this.props.dispatch({type: 'ADD_SUPPORT', payload: supportRating});
+        this.props.dispatch({type: 'SET_SUPPORT', payload: supportRating});
         // takes you to comments page 
         this.props.history.push('/comments');
     }

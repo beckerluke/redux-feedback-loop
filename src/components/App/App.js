@@ -10,6 +10,7 @@ import CommentsPage from '../pages/commentsPage/CommentsPage';
 import ReviewPage from '../pages/reviewPage/ReviewPage';
 import SuccessPage from '../pages/successPage/SuccessPage';
 import SupportPage from '../pages/supportPage/SupportPage';
+import AdminPage from '../pages/AdminPage/AdminPage';
 
 class App extends Component {
   render() {
@@ -26,7 +27,8 @@ class App extends Component {
           <Route exact path="/support" component={SupportPage} />
           <Route exact path="/comments" component={CommentsPage} />
           <Route exact path="/review" component={ReviewPage} />
-          <Route exact path="/success" component={SuccessPage} />         
+          <Route exact path="/success" component={SuccessPage} /> 
+          <Route exact path="/admin" component={AdminPage} />        
         </Router>
       </div>
     );

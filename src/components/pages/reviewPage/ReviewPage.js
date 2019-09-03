@@ -1,38 +1,19 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import { getFeedback, postFeedback } from '../../../modules/services/feedback.service';
+import { postFeedback } from '../../../modules/services/feedback.service';
 import mapStoreToProps from '../../../modules/mapStoreToProps';
 
 class ReviewPage extends Component {
-
-    // componentDidMount() {
-    //     // calls function that sparks GET request for feedback
-    //     // response is the array of objects with feedback data from database
-    //     getFeedback().then((response) => {
-    //         console.log(response.data);
-    //         this.props.dispatch({type: 'SET_FEEDBACK', payload: response.data})
-    //     })
-    // }
     
     clickSubmit = (event) => {
         // POST all feedback data held in reducer to database on click
         postFeedback(this.props.store.addFeedbackReducer);
-        // takes you to Success Page after submission clicked
+        // takes you to Success Page after submission is clicked
         this.props.history.push('/success');
     }
 
 
     render() {
-        // const feedbackArray = this.props.store.feedbackReducer.map((feedback, i) => {
-        //     return (
-        //         <div key={i}>
-        //             <h3>Feelings: {feedback.feeling}</h3>
-        //             <h3>Understanding: {feedback.understanding}</h3>
-        //             <h3>Support: {feedback.support}</h3>
-        //             <h3>Comments: {feedback.comments}</h3>
-        //         </div>
-        //     )
-        // })
 
         // get data from reducer and display 
        const feelingRating = this.props.store.addFeedbackReducer.feeling;

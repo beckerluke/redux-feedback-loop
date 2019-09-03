@@ -4,8 +4,8 @@ import mapStoreToProps from '../../../modules/mapStoreToProps';
 
 class SuccessPage extends Component {
 
-    // takes you to Home Page after submission clicked
     clickNext = (event) => {
+        // takes you to Admin Page after submission clicked
         this.props.history.push('/');
         // RESETS DATA IN addFeedbackReducer
         this.props.dispatch({type: 'ADD_FEELING', payload: ''});
